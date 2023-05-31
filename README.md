@@ -1,8 +1,4 @@
 ```html
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
   <title>README - Тестирование форм "Регистрация" и "Авторизация" на сайте "Ростелеком"</title>
   <style>
 
@@ -71,4 +67,4 @@
 
   <p>В целом, использование <a href="https://docs.pytest.org/en/7.3.x/" target="_blank">PyTest</a> и <a href="https://www.selenium.dev/documentation/webdriver/" target="_blank">Selenium WebDriver</a> позволило автоматизировать тестирование форм "Регистрация" и "Авторизация" на сайте "Ростелеком", обеспечить проверку функциональности и убедиться, что различные элементы и действия работают корректно.</p>
 </body>
-</html>
+
