@@ -6,7 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from settings import valid_email, valid_password, valid_phone, not_valid_phone, not_valid_password, not_valid_email, \
     not_valid_login, not_valid_acc_number, not_correct_phone, not_correct_email, special_characters
 
-
+#  python -m pytest -v --driver Chrome --driver-path C:\Users\Sever\PycharmProjects\diplom\tests\chromedriver.exe C:\Users\Sever\PycharmProjects\diplom\tests\test.py
 def test_registration_with_empty_fields(navigate_to_registration_page):
     pytest.driver.find_element(By.XPATH, '//*[@id="page-right"]/div[1]/div[1]/div[1]/form[1]/button[1]').click()
     assert pytest.driver.find_element(By.TAG_NAME, 'button').text == "Зарегистрироваться"
