@@ -6,6 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from settings import valid_email, valid_password, valid_phone, not_valid_phone, not_valid_password, not_valid_email, \
     not_valid_login, not_valid_acc_number, not_correct_phone, not_correct_email, special_characters
 
+
 #  python -m pytest -v --driver Chrome --driver-path C:\Users\Sever\PycharmProjects\diplom\tests\chromedriver.exe C:\Users\Sever\PycharmProjects\diplom\tests\test.py
 def test_registration_with_empty_fields(navigate_to_registration_page):
     pytest.driver.find_element(By.XPATH, '//*[@id="page-right"]/div[1]/div[1]/div[1]/form[1]/button[1]').click()
@@ -123,8 +124,9 @@ def test_for_work_with_incorrect_input_phone_or_email(navigate_to_registration_p
     assert WebDriverWait(pytest.driver, 5).until(EC.invisibility_of_element_located(
         (By.XPATH, '//span[contains(text(),"Введите телефон в формате +7ХХХХХХХХХХ или +375XXX")]')))
 
-
     """Так я и не победил выпадающий список с регионами"""
+
+
 # def test_for_work_input_fields_region_with_drop_down_list(navigate_to_registration_page):
 #     assert pytest.driver.find_element(By.XPATH,
 #                                       "//body/div[@id='app']/main[@id='app-container']/section[@id='page-right']/div[1]/div[1]/div[1]/form[1]/div[2]/div[1]/div[1]").text == "Регион"

@@ -7,6 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 import os
 
+
 @pytest.fixture(scope="session")
 def logger(request):
     # Определение пути к файлу логов
@@ -49,7 +50,6 @@ def logger(request):
                     error_name = item.longrepr.reprcrash.message
                     logger.error(f"Ошибка при выполнении теста: {error_name}")
 
-
     request.addfinalizer(finalizer)
 
     return logger
@@ -77,7 +77,6 @@ def setup(request, logger):
     return driver
 
 
-
 @pytest.fixture(scope="function")
 def navigate_to_registration_page(setup, logger):
     pytest.driver = setup
@@ -91,7 +90,6 @@ def navigate_to_registration_page(setup, logger):
     WebDriverWait(pytest.driver, 10).until(EC.presence_of_element_located(
         (By.XPATH, '//h1[contains(text(),"Регистрация")]')))
     assert pytest.driver.find_element(By.TAG_NAME, 'h1').text == "Регистрация"
-
 
 
 @pytest.fixture(scope="function")
